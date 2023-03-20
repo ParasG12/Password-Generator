@@ -41,7 +41,14 @@ class Password  {
    let b = document.getElementsByClassName('text')[0]
    var c = null;
    b.addEventListener('keypress',(event)=>{
-   c= event.keyCode-48;
+  if(event.keyCode>=7 && event.keyCode<=16){
+      c= event.keyCode-7;
+
+    }
+    else{
+      c= event.keyCode-48;
+    }
+
    
 
    })
